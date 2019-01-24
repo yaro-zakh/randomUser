@@ -18,6 +18,9 @@
 		B9EFB40C21F9201E002ACA03 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB40B21F9201E002ACA03 /* UserInfo.swift */; };
 		B9EFB40F21F9E8BB002ACA03 /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB40D21F9E8BB002ACA03 /* UserCollectionViewCell.swift */; };
 		B9EFB41021F9E8BB002ACA03 /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EFB40E21F9E8BB002ACA03 /* UserCollectionViewCell.xib */; };
+		B9EFB41221FA552D002ACA03 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41121FA552D002ACA03 /* UserInfoViewController.swift */; };
+		B9EFB41521FA56AD002ACA03 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */; };
+		B9EFB41921FA6481002ACA03 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		B9EFB40B21F9201E002ACA03 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		B9EFB40D21F9E8BB002ACA03 /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9EFB40E21F9E8BB002ACA03 /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9EFB41121FA552D002ACA03 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		EF0F8BBBDBE3AAA08FA9F373 /* Pods_Axon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +136,7 @@
 		B933ACE121F90154001ED63A /* UserInfoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B9EFB41121FA552D002ACA03 /* UserInfoViewController.swift */,
 			);
 			path = UserInfoScreen;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 		B978FE0721F8FA4800AC8335 /* Axon */ = {
 			isa = PBXGroup;
 			children = (
+				B9EFB41321FA5679002ACA03 /* Extension */,
 				B933ACDA21F90068001ED63A /* AppHandling */,
 				B933ACDC21F900BA001ED63A /* Modules */,
 				B933ACDD21F900C6001ED63A /* Models */,
@@ -173,6 +181,15 @@
 				B978FE1421F8FA4D00AC8335 /* Info.plist */,
 			);
 			path = Axon;
+			sourceTree = "<group>";
+		};
+		B9EFB41321FA5679002ACA03 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */,
+				B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,11 +326,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B978FE0921F8FA4800AC8335 /* AppDelegate.swift in Sources */,
+				B9EFB41221FA552D002ACA03 /* UserInfoViewController.swift in Sources */,
 				B933ACEA21F909FA001ED63A /* Request.swift in Sources */,
 				B933ACE321F90182001ED63A /* HomeViewController.swift in Sources */,
+				B9EFB41921FA6481002ACA03 /* UICollectionViewExtension.swift in Sources */,
 				B9EFB40F21F9E8BB002ACA03 /* UserCollectionViewCell.swift in Sources */,
 				B9EFB40C21F9201E002ACA03 /* UserInfo.swift in Sources */,
 				B933ACE721F901BE001ED63A /* HomeViewControllerExtension.swift in Sources */,
+				B9EFB41521FA56AD002ACA03 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

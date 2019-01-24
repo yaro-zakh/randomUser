@@ -14,35 +14,25 @@ class HomeViewController: UIViewController {
     let networkManager = NetworkManager()
     let userCollectionViewCellID = "UserCollectionViewCell"
     var users: [Info] = []
+    var info: Info?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let nibCell = UINib(nibName: userCollectionViewCellID, bundle: nil)
-        userCollectionView.register(nibCell, forCellWithReuseIdentifier: userCollectionViewCellID)
-//        networkManager.getUsers(completion: { (result, error) in
-//            self.users = result.results
-//            print(self.users[0].name?.first)
-//            })
-        //userCollectionView.reloadData()
-    }
-}
-
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        registerCells()
+        networkManager.getUsers(completion: { (result, error) in
+            self.users = result.results
+            self.userCollectionView.reloadData()
+            })
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+    func registerCells() {
+        userCollectionView.register(UINib(nibName: userCollectionViewCellID, bundle: nil), forCellWithReuseIdentifier: userCollectionViewCellID)
+        userCollectionView.layoutCells()
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: userCollectionViewCellID, for: indexPath) as! UserCollectionViewCell
-        
-        cell.firstName.text = "users[indexPath.row].name?.first"
-        cell.lastName.text = "users[indexPath.row].name?.last"
-        
-        return cell
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dectinationView: UserInfoViewController = segue.destination as! UserInfoViewController
+        dectinationView.infoUser = self.info
     }
 }
