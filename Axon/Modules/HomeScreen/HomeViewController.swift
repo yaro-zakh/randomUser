@@ -11,13 +11,11 @@ import UIKit
 class HomeViewController: UIViewController {
 
     let networkManager = NetworkManager()
-    var allUser = [User]()
-    var result:Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager.getUsers(completion: { (result, error) in
-            self.result = result
+            print(result.results[0])
             })
     }
     

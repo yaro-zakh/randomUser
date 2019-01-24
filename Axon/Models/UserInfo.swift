@@ -8,44 +8,41 @@
 
 import Foundation
 
-struct User {
-    let firthName: String
-    let lastName: String
-    let photo: URL
-    let gender: String
-    let phone: String
-    let bDate: String
-    let email: String
-    let description: String
+struct Users: Codable {
+    let results: [Info]
+    
+    private enum CodingKeys: String, CodingKey {
+        case results
+    }
 }
 
-struct Article: Codable {
+struct Info: Codable {
     let cell: String
-    let dob: [Age]
+    let dob: Age
     let email: String
     let gender: String
-    let location: [Zone]
-    let name: [Name]
+    let location: Zone
+    let name: Name
     let phone: String
-    let picture: [Photo]
+    let picture: Photo
+    
+    private enum CodingKeys: String, CodingKey {
+        case cell, dob, email, gender, location, name, phone, picture
+    }
 }
 
 struct Age: Codable {
     let date: Date
-}
-
-extension Age {
-    enum CodingKeys: String, CodingKey {
+    
+    private enum CodingKeys: String, CodingKey {
         case date
     }
 }
 
 struct Zone: Codable {
     let city: String
-}
-
-extension Zone {
-    enum CodingKeys: String, CodingKey {
+    
+    private enum CodingKeys: String, CodingKey {
         case city
     }
 }
@@ -53,10 +50,8 @@ extension Zone {
 struct Name: Codable {
     let first: String
     let last: String
-}
-
-extension Name {
-    enum CodingKeys: String, CodingKey {
+    
+    private enum CodingKeys: String, CodingKey {
         case first, last
     }
 }
@@ -64,10 +59,8 @@ extension Name {
 struct Photo: Codable {
     let large: URL?
     let medium: URL?
-}
-
-extension Photo {
-    enum CodingKeys: String, CodingKey {
+    
+    private enum CodingKeys: String, CodingKey {
         case large, medium
     }
 }

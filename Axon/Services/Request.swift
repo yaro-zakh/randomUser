@@ -8,11 +8,10 @@
 
 import Foundation
 import Alamofire
-import SwiftyJSON
 
 class NetworkManager {
     
-    func getUsers(completion: @escaping (Any?, Error?) -> Void) {
+    func getUsers(completion: @escaping (Users, Error?) -> Void) {
         guard let url = URL(string: "https://randomuser.me/api/?results=50") else { return }
 
         Alamofire.request(url).responseJSON { response in
@@ -20,12 +19,20 @@ class NetworkManager {
         }
     }
     
-    private func checkingForResponse(response: DataResponse<Any>, completion: @escaping (Any?, Error?) -> Void) {
+    private func checkingForResponse(response: DataResponse<Any>, completion: @escaping (Users, Error?) -> Void) {
         switch response.result {
         case .success:
             print("Success from NetworkManager")
-            if let result = response.result.value {
-                completion(result, nil)
+            if let result = response.data {
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.dateDecodingStrategy = .iso8601
+                    let userInfo = try decoder.decode(Users.self, from: result)
+                    //dump(userInfo.results[0])
+                    completion(userInfo, nil)
+                } catch let error {
+                    print(error)
+                }
             }
         case .failure(let error):
             print(error)
