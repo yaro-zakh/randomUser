@@ -12,11 +12,13 @@ class HomeViewController: UIViewController {
 
     let networkManager = NetworkManager()
     var allUser = [User]()
+    var result:Any?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         networkManager.getUsers(completion: { (result, error) in
-            print(result!)
+            self.result = result
             })
     }
+    
 }

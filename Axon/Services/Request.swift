@@ -11,9 +11,10 @@ import Alamofire
 import SwiftyJSON
 
 class NetworkManager {
+    
     func getUsers(completion: @escaping (Any?, Error?) -> Void) {
-        let url = "https://randomuser.me/api/?results=50"
-        
+        guard let url = URL(string: "https://randomuser.me/api/?results=50") else { return }
+
         Alamofire.request(url).responseJSON { response in
             self.checkingForResponse(response: response, completion: completion)
         }
@@ -30,4 +31,5 @@ class NetworkManager {
             print(error)
         }
     }
+
 }
