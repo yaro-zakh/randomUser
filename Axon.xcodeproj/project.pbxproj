@@ -21,6 +21,7 @@
 		B9EFB41221FA552D002ACA03 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41121FA552D002ACA03 /* UserInfoViewController.swift */; };
 		B9EFB41521FA56AD002ACA03 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */; };
 		B9EFB41921FA6481002ACA03 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */; };
+		B9EFB41B21FA6B8E002ACA03 /* SrtingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EFB41A21FA6B8E002ACA03 /* SrtingExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B9EFB41121FA552D002ACA03 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		B9EFB41A21FA6B8E002ACA03 /* SrtingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SrtingExtension.swift; sourceTree = "<group>"; };
 		EF0F8BBBDBE3AAA08FA9F373 /* Pods_Axon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Axon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -188,6 +190,7 @@
 			children = (
 				B9EFB41421FA56AD002ACA03 /* UIImageExtension.swift */,
 				B9EFB41821FA6481002ACA03 /* UICollectionViewExtension.swift */,
+				B9EFB41A21FA6B8E002ACA03 /* SrtingExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B978FE0921F8FA4800AC8335 /* AppDelegate.swift in Sources */,
+				B9EFB41B21FA6B8E002ACA03 /* SrtingExtension.swift in Sources */,
 				B9EFB41221FA552D002ACA03 /* UserInfoViewController.swift in Sources */,
 				B933ACEA21F909FA001ED63A /* Request.swift in Sources */,
 				B933ACE321F90182001ED63A /* HomeViewController.swift in Sources */,
