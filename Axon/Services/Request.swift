@@ -12,7 +12,7 @@ import Alamofire
 class NetworkManager {
     
     func getUsers(completion: @escaping (Users, Error?) -> Void) {
-        guard let url = URL(string: "https://randomuser.me/api/?results=50") else { return }
+        guard let url = URL(string: "https://randomuser.me/api/?results=5") else { return }
 
         Alamofire.request(url).responseJSON { response in
             self.checkingForResponse(response: response, completion: completion)
@@ -28,7 +28,6 @@ class NetworkManager {
                     let decoder = JSONDecoder()
                     decoder.dateDecodingStrategy = .iso8601
                     let userInfo = try decoder.decode(Users.self, from: result)
-                    //dump(userInfo.results[0])
                     completion(userInfo, nil)
                 } catch let error {
                     print(error)

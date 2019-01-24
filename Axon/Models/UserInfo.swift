@@ -9,22 +9,22 @@
 import Foundation
 
 struct Users: Codable {
-    let results: [Info]
-    
+    let results:[Info]
+
     private enum CodingKeys: String, CodingKey {
         case results
     }
 }
 
 struct Info: Codable {
-    let cell: String
-    let dob: Age
-    let email: String
-    let gender: String
-    let location: Zone
-    let name: Name
-    let phone: String
-    let picture: Photo
+    let cell: String?
+    let dob: Age?
+    let email: String?
+    let gender: String?
+    let location: Zone?
+    let name: Name?
+    let phone: String?
+    let picture: Photo?
     
     private enum CodingKeys: String, CodingKey {
         case cell, dob, email, gender, location, name, phone, picture
@@ -32,7 +32,7 @@ struct Info: Codable {
 }
 
 struct Age: Codable {
-    let date: Date
+    let date: Date?
     
     private enum CodingKeys: String, CodingKey {
         case date
@@ -40,7 +40,7 @@ struct Age: Codable {
 }
 
 struct Zone: Codable {
-    let city: String
+    let city: String?
     
     private enum CodingKeys: String, CodingKey {
         case city
@@ -48,8 +48,8 @@ struct Zone: Codable {
 }
 
 struct Name: Codable {
-    let first: String
-    let last: String
+    let first: String?
+    let last: String?
     
     private enum CodingKeys: String, CodingKey {
         case first, last
