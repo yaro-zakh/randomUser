@@ -8,7 +8,6 @@ target 'Axon' do
   platform :ios, '10.0'
 
   pod 'Alamofire'
-  pod 'SwiftyJSON'
 
   # UI
   pod 'NVActivityIndicatorView'

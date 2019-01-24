@@ -72,10 +72,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-IR-BpB">
-                                <rect key="frame" x="94" y="74" width="187.5" height="187"/>
+                                <rect key="frame" x="87.5" y="74" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5zs-Vx-1N4"/>
+                                    <constraint firstAttribute="width" constant="200" id="fgo-lz-K3H"/>
+                                </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sXX-ap-J5H">
-                                <rect key="frame" x="30" y="302" width="315" height="31"/>
+                                <rect key="frame" x="30" y="315" width="315" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HHY-Cg-a2J"/>
                                 </constraints>
@@ -92,7 +96,7 @@
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUh-kQ-Y5p">
-                                <rect key="frame" x="20" y="271" width="335" height="21"/>
+                                <rect key="frame" x="20" y="284" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -103,14 +107,12 @@
                             <constraint firstItem="Bga-IR-BpB" firstAttribute="centerX" secondItem="lyF-kY-Vtg" secondAttribute="centerX" id="29P-l8-rMj"/>
                             <constraint firstItem="OUh-kQ-Y5p" firstAttribute="top" secondItem="Bga-IR-BpB" secondAttribute="bottom" constant="10" id="8VI-22-Cid"/>
                             <constraint firstItem="OUh-kQ-Y5p" firstAttribute="centerX" secondItem="lyF-kY-Vtg" secondAttribute="centerX" id="9cj-jk-NdW"/>
-                            <constraint firstItem="Bga-IR-BpB" firstAttribute="width" secondItem="7xb-6w-pYP" secondAttribute="width" multiplier="0.5" id="Dga-ff-Voy"/>
                             <constraint firstItem="sXX-ap-J5H" firstAttribute="top" secondItem="OUh-kQ-Y5p" secondAttribute="bottom" constant="10" id="GcW-ge-1of"/>
-                            <constraint firstItem="Bga-IR-BpB" firstAttribute="height" secondItem="7xb-6w-pYP" secondAttribute="height" multiplier="0.28" id="LXI-6k-GZN"/>
+                            <constraint firstItem="Bga-IR-BpB" firstAttribute="top" secondItem="lyF-kY-Vtg" secondAttribute="top" constant="10" id="IaB-7e-3Rx"/>
                             <constraint firstItem="lyF-kY-Vtg" firstAttribute="trailing" secondItem="sXX-ap-J5H" secondAttribute="trailing" constant="30" id="Qdl-dY-TP1"/>
                             <constraint firstItem="lyF-kY-Vtg" firstAttribute="trailing" secondItem="OUh-kQ-Y5p" secondAttribute="trailing" constant="20" id="hJN-yq-icO"/>
                             <constraint firstItem="sXX-ap-J5H" firstAttribute="leading" secondItem="lyF-kY-Vtg" secondAttribute="leading" constant="30" id="hMB-3m-pNr"/>
                             <constraint firstItem="sXX-ap-J5H" firstAttribute="centerX" secondItem="lyF-kY-Vtg" secondAttribute="centerX" id="hPP-B0-2Op"/>
-                            <constraint firstItem="Bga-IR-BpB" firstAttribute="top" secondItem="lyF-kY-Vtg" secondAttribute="top" constant="10" id="lPQ-aj-CZe"/>
                             <constraint firstItem="OUh-kQ-Y5p" firstAttribute="leading" secondItem="lyF-kY-Vtg" secondAttribute="leading" constant="20" id="qSa-qn-ne6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lyF-kY-Vtg"/>
