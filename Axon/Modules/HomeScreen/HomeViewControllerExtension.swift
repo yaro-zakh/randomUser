@@ -19,6 +19,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let user = users[indexPath.row]
         cell.photoUser.load(url: user.picture?.large)
+        cell.photoUser.border()
         cell.firstName.text = user.name?.first?.capitalizingFirstLetter()
         cell.lastName.text = user.name?.last?.capitalizingFirstLetter()
         cell.layer.cornerRadius = 20
