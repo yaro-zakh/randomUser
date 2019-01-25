@@ -29,6 +29,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.info = users[indexPath.row]
-        self.performSegue(withIdentifier: "userIdentifier", sender: self)
+        self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 }

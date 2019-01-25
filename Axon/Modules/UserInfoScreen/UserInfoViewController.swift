@@ -18,21 +18,31 @@ class UserInfoViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     
     var infoUser: Info?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        photoUser.load(url: infoUser?.picture?.large)
-        photoUser.border()
+        setupProfileInfo()
+    }
+    
+    private func setupProfileInfo() {
+        setupProfilePhoto()
+        
         if let name = infoUser?.name {
             nameLabel.text = name.first!.capitalizingFirstLetter() + " " + name.last!.capitalizingFirstLetter()
             genderLabel.text = infoUser?.gender?.capitalizingFirstLetter()
-            bdLabel.text = getFormattedDate(oldDate: infoUser?.dob?.date)
+            bdLabel.text = obtainFormattedDate(oldDate: infoUser?.dob?.date)
             cellLabel.text = infoUser?.cell
             cityLabel.text = infoUser?.location?.city?.capitalizingFirstLetter()
         }
     }
+    
+    private func setupProfilePhoto() {
+        photoUser.load(url: infoUser?.picture?.large)
+        photoUser.border()
+    }
 
-    func getFormattedDate(oldDate: Date?) -> String {
+    private func obtainFormattedDate(oldDate: Date?) -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         

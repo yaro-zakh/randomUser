@@ -11,7 +11,7 @@ import Alamofire
 
 class NetworkManager {
     
-    func getUsers(completion: @escaping (Users, Error?) -> Void) {
+    func obtainUsers(completion: @escaping (Users, Error?) -> Void) {
         guard let url = URL(string: "https://randomuser.me/api/?results=100") else { return }
 
         Alamofire.request(url).responseJSON { response in

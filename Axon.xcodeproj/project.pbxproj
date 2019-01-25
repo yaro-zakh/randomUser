@@ -66,6 +66,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1FD611E321FAF80700CBAA7B /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B9EFB40D21F9E8BB002ACA03 /* UserCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		A47A7B46C1B52431BE20AD0E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +139,7 @@
 			children = (
 				B933ACE221F90182001ED63A /* HomeViewController.swift */,
 				B933ACE621F901BE001ED63A /* HomeViewControllerExtension.swift */,
+				1FD611E321FAF80700CBAA7B /* CollectionViewCells */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -146,7 +155,6 @@
 		B933ACE821F902A5001ED63A /* CollectionCellsXibs */ = {
 			isa = PBXGroup;
 			children = (
-				B9EFB40D21F9E8BB002ACA03 /* UserCollectionViewCell.swift */,
 				B9EFB40E21F9E8BB002ACA03 /* UserCollectionViewCell.xib */,
 			);
 			path = CollectionCellsXibs;
@@ -173,11 +181,11 @@
 		B978FE0721F8FA4800AC8335 /* Axon */ = {
 			isa = PBXGroup;
 			children = (
-				B9EFB41321FA5679002ACA03 /* Extension */,
 				B933ACDA21F90068001ED63A /* AppHandling */,
 				B933ACDC21F900BA001ED63A /* Modules */,
 				B933ACDD21F900C6001ED63A /* Models */,
 				B933ACDE21F900DC001ED63A /* Services */,
+				B9EFB41321FA5679002ACA03 /* Extension */,
 				B933ACDB21F9009C001ED63A /* Resources */,
 				B978FE1121F8FA4D00AC8335 /* LaunchScreen.storyboard */,
 				B978FE1421F8FA4D00AC8335 /* Info.plist */,
@@ -483,10 +491,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS82QFQAF9;
+				DEVELOPMENT_TEAM = 9596FLHWUS;
 				INFOPLIST_FILE = Axon/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yzakharc.axon-test";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yzakharc.axon-test1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,10 +510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS82QFQAF9;
+				DEVELOPMENT_TEAM = 9596FLHWUS;
 				INFOPLIST_FILE = Axon/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "yzakharc.axon-test";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yzakharc.axon-test1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

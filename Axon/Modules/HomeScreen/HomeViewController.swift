@@ -9,24 +9,33 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    private let networkManager = NetworkManager()
+    
     @IBOutlet weak var userCollectionView: UICollectionView!
     
-    let networkManager = NetworkManager()
+    
     let userCollectionViewCellID = "UserCollectionViewCell"
+    let segueIdentifier = "userIdentifier"
+    
     var users: [Info] = []
     var info: Info?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         registerCells()
-        networkManager.getUsers(completion: { (result, error) in
-            self.users = result.results
-            self.userCollectionView.reloadData()
-            })
+
+        fetchUsers()
     }
     
-    func registerCells() {
+    private func fetchUsers() {
+        networkManager.obtainUsers(completion: { (result, error) in
+            self.users = result.results
+            self.userCollectionView.reloadData()
+        })
+    }
+    
+    private func registerCells() {
         userCollectionView.register(UINib(nibName: userCollectionViewCellID, bundle: nil), forCellWithReuseIdentifier: userCollectionViewCellID)
         userCollectionView.layoutCells()
     }
